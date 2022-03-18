@@ -1,0 +1,77 @@
+#pragma version 4
+global GroupSize
+int 1
+==
+bnz main_l4
+global GroupSize
+int 5
+==
+bnz main_l3
+err
+main_l3:
+gtxn 0 XferAsset
+int 239444645
+==
+gtxn 1 Amount
+int 3000
+==
+&&
+gtxn 2 TypeEnum
+int appl
+==
+&&
+gtxn 2 ApplicationID
+int 490200975
+==
+&&
+gtxn 2 OnCompletion
+int NoOp
+==
+&&
+gtxn 3 TypeEnum
+int axfer
+==
+&&
+gtxn 3 XferAsset
+int 239444645
+==
+&&
+gtxn 3 Fee
+int 1000
+<=
+&&
+gtxn 3 AssetCloseTo
+global ZeroAddress
+==
+&&
+gtxn 3 RekeyTo
+global ZeroAddress
+==
+&&
+b main_l5
+main_l4:
+txn TypeEnum
+int axfer
+==
+txn XferAsset
+int 239444645
+==
+&&
+txn AssetAmount
+int 0
+==
+&&
+txn Fee
+int 1000
+<=
+&&
+txn RekeyTo
+global ZeroAddress
+==
+&&
+txn AssetCloseTo
+global ZeroAddress
+==
+&&
+main_l5:
+return

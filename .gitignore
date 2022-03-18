@@ -1,0 +1,7 @@
+.env
+node_modules
+uploads
+downloads
+Temp
+Video
+dist

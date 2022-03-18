@@ -1,0 +1,74 @@
+openapi: 3.0.1
+info:
+    title: ms-files
+    version: 0.0.1
+    description: Microservice - Upload and download files
+servers:
+    - url: "http://localhost/"
+paths:
+    /api/download/{filename}:
+        get:
+            summary: Download single file.
+            parameters:
+              - in: path
+                name: filename
+                schema:
+                    type: string
+                required: true
+                description: File name / id
+            responses:
+                "200":
+                    description: ok
+                    content:
+                        application/json:
+                            schema:
+                                type: string
+    /api/upload:
+        post:
+            summary: Upload and sign single file.
+            requestBody:
+                description: File
+                content:
+                    multipart/form-data:
+                        schema:
+                            type: string
+                            format: binary
+                required: true
+            responses:
+                "200":
+                    description: OK.
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                properties:
+                                    transaction:
+                                        type: string
+                                        description: Transaction id.
+                                    uri:
+                                        type: string
+                                        description: Uri to blockhain transaction.
+                                    confirmed_txn_note:
+                                        type: object
+                                        properties:
+                                            cid:
+                                                type: string
+                                                description: Id for IPFS file.
+                                            extension:
+                                                type: string
+                                                description: File extension.
+                                            fileHash:
+                                                type: string
+                                                description: File hash.
+                                            filename:
+                                                type: string
+                                                description: File name / id.
+                                    file_id:
+                                        type: string
+                                        description: File name / id.
+                "400":
+                    description: Something went wrong
+                    content: {}
+                default:
+                    description: Unknown Error
+                    content: {}
