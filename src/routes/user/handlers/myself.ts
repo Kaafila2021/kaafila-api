@@ -1,6 +1,7 @@
 import handleError from "../../../helpers/handle-error";
 import User from '../../register/schemas/User.schema';
 import axios from 'axios';
+require('dotenv').config();
 
 const myself = async (req, res) => {
 
@@ -20,7 +21,7 @@ const myself = async (req, res) => {
                 ],
                 "uid": user._id
             }
-            const { data } = await axios.post('https://wjcpttgp59.execute-api.us-west-2.amazonaws.com/prd/grant', body, { headers: { 'Authorization': 'djIxzDQCjDTLKAH5A1sLh3TY4PAbqWKMNP8kwETSfyprvy26u' } });
+            const { data } = await axios.post('https://wjcpttgp59.execute-api.us-west-2.amazonaws.com/prd/grant', body, { headers: { 'Authorization': process.env.IPFS_NODE_KEY } });
 
             res
                 .status(200)
