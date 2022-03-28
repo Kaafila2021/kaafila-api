@@ -4,9 +4,9 @@ import FileUpload from "../../upload/handlers/schemas/fileUpload.schema";
 const downloadVideoData = async (req, res) => {
     console.log('Downloading...');
     try {
-        const { fileId } = req.params;
+        const { fileHash } = req.params;
 
-        const file = await FileUpload.findOne({ file_id: fileId }).populate('user');
+        const file = await FileUpload.findOne({ "confirmed_txn_note.hash": fileHash }).populate('user');
 
         res
             .status(200)
