@@ -14,7 +14,7 @@ router
     .get(downloadFilesArtist)
 
 router
-    .route('/video-data/:fileId')
+    .route('/video-data/:fileHash')
     .get(downloadVideoData)
 
 // Deprecated upload and download from front side
