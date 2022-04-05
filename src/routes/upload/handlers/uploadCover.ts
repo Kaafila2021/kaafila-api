@@ -1,7 +1,7 @@
 import handleError from "../../../helpers/handle-error";
 import _fileHash from "../../../helpers/sha256";
-import FileUpload from './schemas/fileUpload.schema';
 import fs from 'fs';
+import FileUpload from "../../../schemas/fileUpload.schema";
 
 const uploadCover = async (req, res) => {
     try {

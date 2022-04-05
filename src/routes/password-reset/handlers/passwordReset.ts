@@ -1,6 +1,6 @@
 import handleError from "../../../helpers/handle-error";
-import User from '../../register/schemas/User.schema';
-import Token from "../schemas/Token.schema";
+import User from '../../../schemas/User.schema';
+import Token from "../../../schemas/Token.schema";
 const bcrypt = require('bcrypt');
 
 const passwordReset = async (req, res) => {

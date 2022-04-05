@@ -1,5 +1,5 @@
 import handleError from "../../../helpers/handle-error";
-import FileUpload from "../../upload/handlers/schemas/fileUpload.schema";
+import FileUpload from "../../../schemas/fileUpload.schema";
 
 function shuffle(array) {
     let currentIndex = array.length, randomIndex;

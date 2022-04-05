@@ -1,5 +1,5 @@
 import handleError from "../../../helpers/handle-error";
-import Pack from "../schemas/pack.schema";
+import Pack from "../../../schemas/pack.schema";
 
 const buyPack = async (req, res) => {
     try {
