@@ -1,5 +1,5 @@
 import handleError from "../../../helpers/handle-error";
-import User from '../../register/schemas/User.schema';
+import User from '../../../schemas/User.schema';
 import axios from 'axios';
 require('dotenv').config();
 

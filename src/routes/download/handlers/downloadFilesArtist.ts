@@ -1,8 +1,7 @@
 import handleError from "../../../helpers/handle-error";
-import FileUpload from "../../upload/handlers/schemas/fileUpload.schema";
+import FileUpload from "../../../schemas/fileUpload.schema";
 
 const downloadFilesArtist = async (req, res) => {
-    console.log('Downloading...');
     try {
         const { id } = req.params;
 

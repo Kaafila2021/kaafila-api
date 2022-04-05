@@ -1,6 +1,6 @@
 import handleError from "../../../helpers/handle-error";
 import _fileHash from "../../../helpers/sha256";
-import FileUpload from './schemas/fileUpload.schema';
+import FileUpload from "../../../schemas/fileUpload.schema";
 
 const disableVideo = async (req, res) => {
     try {

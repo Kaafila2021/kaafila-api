@@ -1,5 +1,5 @@
 import handleError from "../../../helpers/handle-error";
-import User from "../schemas/User.schema";
+import User from "../../../schemas/User.schema";
 const bcrypt = require('bcrypt');
 
 const register = async (req, res) => {

@@ -1,5 +1,5 @@
 import handleError from "../../../helpers/handle-error";
-import AdminRates from "../schemas/AdminRates.schema";
+import AdminRates from "../../../schemas/AdminRates.schema";
 
 const adminRates = async (req, res) => {
     try {

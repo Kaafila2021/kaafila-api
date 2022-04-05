@@ -1,7 +1,7 @@
 import handleError from "../../../helpers/handle-error";
 import sendEmail from "../../../helpers/send-email";
-import User from '../../register/schemas/User.schema';
-import Token from "../schemas/Token.schema";
+import User from '../../../schemas/User.schema';
+import Token from "../../../schemas/Token.schema";
 const crypto = require("crypto");
 
 const passwordEmail = async (req, res) => {

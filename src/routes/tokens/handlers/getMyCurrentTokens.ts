@@ -1,6 +1,6 @@
 import handleError from "../../../helpers/handle-error";
-import AdminRates from "../../admin-rates/schemas/AdminRates.schema";
-import WalletVideoWatch from "../../sockets/schemas/wallet-video-watch.schema";
+import AdminRates from "../../../schemas/AdminRates.schema";
+import WalletVideoWatch from "../../../schemas/wallet-video-watch.schema";
 
 let currentRate: number;
 

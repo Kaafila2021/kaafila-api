@@ -1,8 +1,8 @@
 import handleError from "../../../helpers/handle-error";
 import { algow } from '../../../AlgoIPFS';
 import algosdk, { Algodv2 } from 'algosdk';
-import WalletVideoWatch from "../../sockets/schemas/wallet-video-watch.schema";
-import AdminRates from "../../admin-rates/schemas/AdminRates.schema";
+import WalletVideoWatch from "../../../schemas/wallet-video-watch.schema";
+import AdminRates from "../../../schemas/AdminRates.schema";
 require('dotenv').config();
 const fs = require('fs');
 

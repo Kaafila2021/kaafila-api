@@ -1,5 +1,5 @@
 import handleError from "../../../helpers/handle-error";
-import WalletVideoWatch from '../../sockets/schemas/wallet-video-watch.schema';
+import WalletVideoWatch from '../../../schemas/wallet-video-watch.schema';
 
 const videoWached = async (req, res) => {
 

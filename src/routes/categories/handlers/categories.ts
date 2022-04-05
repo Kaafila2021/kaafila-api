@@ -1,5 +1,5 @@
 import handleError from "../../../helpers/handle-error";
-import Categories from "../schemas/Categories.schema";
+import Categories from "../../../schemas/Categories.schema";
 
 const categories = async (req, res) => {
     try {
