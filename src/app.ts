@@ -28,6 +28,7 @@ import routeCategories from './routes/categories';
 import routeCategory from './routes/category';
 import routeAdminRates from './routes/admin-rates';
 import routePasswordReset from './routes/password-reset';
+import routeActivateAccount from './routes/activate-account';
 
 // Init DB => 
 initDBConnection();
@@ -59,6 +60,8 @@ app.use('/api/packs', routePacks);
 app.use('/api/categories', routeCategories);
 app.use('/api/category', routeCategory);
 app.use('/api/password-reset', routePasswordReset);
+app.use('/api/activate-account', routeActivateAccount);
+
 // Auth routes
 app.use('/api/user', verifyToken, routeUser);
 app.use('/api/upload', verifyToken, routeUpload);

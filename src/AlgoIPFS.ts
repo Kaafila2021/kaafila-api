@@ -8,8 +8,8 @@ const algodConfigTEST: IAlgoModel = {
     'algodToken': {
         'X-API-Key': ''
     },
-    'algodServer': 'https://testnet.algoexplorerapi.io/',
-    'indexerServer': 'https://testnet.algoexplorerapi.io/idx2',
+    'algodServer': 'https://node.testnet.algoexplorerapi.io/',
+    'indexerServer': 'https://algoindexer.testnet.algoexplorerapi.io/v2',
     'algodPort': '',
     'passphrase': process.env.WALLET_PASSPHRASE,
     'encryptionPassword': 'ecryptedtst'
