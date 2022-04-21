@@ -8,7 +8,7 @@ const bcrypt = require('bcrypt');
 const crypto = require("crypto");
 
 const register = async (req, res) => {
-
+ 
     try {
         const isEmailExist = await User.findOne({ email: req.body.email });
         if (isEmailExist) {
