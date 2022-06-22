@@ -8,7 +8,7 @@ const bcrypt = require('bcrypt');
 const crypto = require("crypto");
 
 const register = async (req, res) => {
- 
+
     try {
         const isEmailExist = await User.findOne({ email: req.body.email });
         if (isEmailExist) {
@@ -29,7 +29,7 @@ const register = async (req, res) => {
             password
         }) as any;
 
-        if (req.query.hasOwnProperty('referer')) {
+        if (req.query.hasOwnProperty('referer') && req.query.referer !== 'undefined') {
             const referer = new Referer({
                 referer: user._id,
                 referedBy: req.query.referer
