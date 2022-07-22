@@ -9,7 +9,8 @@ const FileUploadSchema = new Schema({
     uri: String,
     confirmed_txn_note: {
         hash: String,
-        hashV0: String
+        hashV0: String,
+        key: String
     },
     file_id: String,
     file_preview: String,
